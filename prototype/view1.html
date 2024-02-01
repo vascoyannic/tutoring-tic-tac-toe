@@ -75,6 +75,54 @@
             height: 100%;
         }
 
+        .score {
+            margin: 12px 24px;
+            font-size: 18px;
+            line-height: 30px;
+            border-collapse: collapse;
+        }
+
+        .score tr {
+            border-bottom: 1px solid #444;
+        }
+
+        .score tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .score td, .score th {
+            padding: 0 6px;
+            box-sizing: border-box;
+        }
+
+        .score-name {
+            text-align: left;
+        }
+
+        .score-data {
+            text-align: center;
+            min-width: 36px;
+        }
+
+        .score-icon {
+            display: block;
+            position: relative;
+            width: 18px;
+            height: 18px;
+            margin: 0 auto;
+            mask-size: 18px 18px;
+        }
+
+        .icon-o {
+            background-color: #ca2e55;
+            mask: url(./icon_O.svg) no-repeat center center;
+        }
+
+        .icon-x {
+            background-color: #156aca;
+            mask: url(./icon_X.svg) no-repeat center center;
+        }
+
         .board-box {
             flex: 1 1 auto;
             display: flex;
@@ -108,27 +156,30 @@
         <main>
             <div>
                 <!-- Rank Table -->
-                <table>
+                <table class="score">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>W</th>
-                            <th>D</th>
-                            <th>L</th>
+                            <th></th>
+                            <th class="score-name">Name</th>
+                            <th class="score-data">W</th>
+                            <th class="score-data">D</th>
+                            <th class="score-data">L</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>John Doe</td>
-                            <td>10</td>
-                            <td>5</td>
-                            <td>2</td>
+                            <td class="score-icon-cell"><div class="score-icon icon-o"></div></td>
+                            <td class="score-name">John Doe</td>
+                            <td class="score-data">10</td>
+                            <td class="score-data">5</td>
+                            <td class="score-data">2</td>
                         </tr>
                         <tr>
-                            <td>Jane Doe</td>
-                            <td>5</td>
-                            <td>5</td>
-                            <td>10</td>
+                            <td class="score-icon-cell"><div class="score-icon icon-x"></div></td>
+                            <td class="score-name">Jane Doe</td>
+                            <td class="score-data">5</td>
+                            <td class="score-data">5</td>
+                            <td class="score-data">10</td>
                         </tr>
                     </tbody>
                 </table>
