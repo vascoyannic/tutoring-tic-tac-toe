@@ -22,6 +22,50 @@
 
         header {
             background: #E9E9E9;
+            display: flex;
+            flex-flow: row nowrap;
+            padding: 0 24px;
+        }
+
+        header>nav {
+            flex: 0 0 auto;
+        }
+
+        .back, .back:hover, .back:focus, .back:visited, .back:active {
+            display: block;
+            position: relative;
+            width: 48px;
+            height: 48px;
+        }
+
+        .back:focus {
+            outline: 2px solid #3c3c3c;
+            outline-offset: -2px;
+        }
+
+        .icon-back {
+            display: block;
+            position: relative;
+            width: 48px;
+            height: 48px;
+
+            background-color: black;
+            mask: url(./icon_Back.svg) no-repeat center center;
+            mask-size: 24px 24px;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .back:hover>.icon-back, .back:focus>.icon-back {
+            background-color: #3c3c3c;
+        }
+
+        header>h1 {
+            flex: 1 1 auto;
+            margin: 0;
+            text-align: center;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 200%;
         }
 
         main {
@@ -55,7 +99,9 @@
     <div id="app">
         <header>
             <nav>
-                <a href="#">Back</a>
+                <a href="#" title="Back" class="back">
+                    <div class="icon-back"></div>
+                </a>
             </nav>
             <h1>Tic-Tac-Toe against Jane Doe</h1>
         </header>
