@@ -105,6 +105,10 @@
             min-width: 36px;
         }
 
+        .score-sum {
+            background: #f0f0f0;
+        }
+
         .score-icon {
             display: block;
             position: relative;
@@ -163,8 +167,7 @@
                             <th></th>
                             <th class="score-name">Name</th>
                             <th class="score-data">W</th>
-                            <th class="score-data">D</th>
-                            <th class="score-data">L</th>
+                            <th class="score-data score-sum">Σ</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -172,15 +175,13 @@
                             <td class="score-icon-cell"><div class="score-icon icon-o"></div></td>
                             <td class="score-name">John Doe</td>
                             <td class="score-data">10</td>
-                            <td class="score-data">5</td>
-                            <td class="score-data">2</td>
+                            <td class="score-data score-sum">5</td>
                         </tr>
                         <tr>
                             <td class="score-icon-cell"><div class="score-icon icon-x"></div></td>
                             <td class="score-name">Jane Doe</td>
                             <td class="score-data">5</td>
-                            <td class="score-data">5</td>
-                            <td class="score-data">10</td>
+                            <td class="score-data score-sum">5</td>
                         </tr>
                     </tbody>
                 </table>
