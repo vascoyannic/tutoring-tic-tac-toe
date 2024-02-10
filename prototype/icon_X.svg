@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <defs>
-    <style>
-      .cls-1 {
-        stroke-width: 0px;
-      }
-    </style>
-  </defs>
-  <polygon class="cls-1" points="24 2.47 21.53 0 12 9.53 2.47 0 0 2.47 9.53 12 0 21.53 2.47 24 12 14.47 21.53 24 24 21.53 14.47 12 24 2.47"/>
+<svg id="a" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <polygon points="24 2.4746 21.5254 0 12 9.5254 2.4746 0 0 2.4746 9.5254 12 0 21.5254 2.4746 24 12 14.4746 21.5254 24 24 21.5254 14.4746 12 24 2.4746" style="stroke-width: 0px;"/>
 </svg>
