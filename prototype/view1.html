@@ -7,6 +7,7 @@
         html, body {
             display: block;
             height: 100vh;
+            font-size: 18px;
         }
 
         body {
@@ -40,7 +41,7 @@
         }
 
         .back:focus {
-            outline: 2px solid #d7d7d7;
+            outline: 2px solid #fff;
             outline-offset: -2px;
         }
 
@@ -56,7 +57,7 @@
         }
 
         .back:hover>.icon-back, .back:focus>.icon-back {
-            background-color: #d7d7d7;
+            background-color: #fff;
         }
 
         header>h1 {
@@ -77,7 +78,6 @@
 
         .score {
             margin: 12px 24px;
-            font-size: 18px;
             line-height: 30px;
             border-collapse: collapse;
         }
@@ -224,6 +224,45 @@
             top: 50%;
         }
 
+        .buttons {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .buttons>button {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+            margin: 1.5rem 0.5rem;
+            padding: 0.05rem 1.5rem;
+            line-height: 1.4;
+            background: #6D72C3;
+            color: #f0f0f0;
+            border: 0;
+            border-radius: 0.2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+
+        .buttons>button:hover, .buttons>button:focus {
+            color: #fff;
+        }
+
+        .buttons>button:focus {
+            outline-offset: 2px;
+        }
+
+        .buttons>button[disabled] {
+            background-color: #898989;
+            cursor: default;
+        }       
+
+        .buttons>button[disabled]:hover {
+            color: #f0f0f0;
+        }
+
+
     </style>
 </head>
 <body>
@@ -283,11 +322,11 @@
                     <div class="board-win-line board-win-line-diagonal-positive"></div>
                 </div>
             </div>
-            <div>
+            <div class="buttons">
                 <!-- Game Button -->
                 <button>New Game</button>
-                <button>Offer Draw</button>
-                <button>Resign</button>
+                <button disabled>Offer Draw</button>
+                <button disabled>Resign</button>
             </div>
         </main>
     </div>
