@@ -1,0 +1,20 @@
+VSCode: https://code.visualstudio.com/
+Node: https://nodejs.org/en
+
+VSCode Extensions:
+JavaScript and TypeScript
+
+Node Programme: (in Powershell)
+```
+npm install --global local-web-server
+
+Dann verfügbar über:
+
+ws
+```
+
+Konsolen-befehle zum merken:
+npm i -g <paket> // Installiert ein Paket global
+npm i --save <paket> // Installiert ein Paket als Dependency
+npm i --save-dev <paket> // Installiert ein Paket als Dev-Dependency
+npm run <command> // Führt den Befehl mit Alias command aus
