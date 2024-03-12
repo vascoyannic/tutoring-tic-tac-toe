@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View 1</title>
+    <meta charset="utf-8" />
+    <style>
+        html, body {
+            display: block;
+            height: 100vh;
+            font-size: 18px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        #app {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: stretch;
+            height: 100%;
+        }
+
+        h2 {
+            font-size: 1rem;
+        }
+
+        header {
+            background: #6D72C3;
+            display: flex;
+            flex-flow: row nowrap;
+            padding: 0 24px;
+            color: #f0f0f0; 
+        }
+
+        header>h1 {
+            flex: 1 1 auto;
+            margin: 0;
+            text-align: center;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 200%;
+        }
+
+        main {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: stretch;
+            height: 100%;
+        }
+
+        .form-box {
+            flex: 1 1 auto;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form {
+            display: block;
+        }
+
+        .form-button {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form button {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+            margin: 0.5rem 0.5rem 1.5rem;
+            padding: 0.05rem 1.5rem;
+            line-height: 1.4;
+            background: #6D72C3;
+            color: #f0f0f0;
+            border: 0;
+            border-radius: 0.2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+
+        .form button:hover, .form button:focus {
+            color: #fff;
+        }
+
+        .form button:focus {
+            outline-offset: 2px;
+        }
+
+        .form button[disabled] {
+            background-color: #898989;
+            cursor: default;
+        }       
+
+        .form button[disabled]:hover {
+            color: #f0f0f0;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Join a Tic-Tac-Toe</h1>
+        </header>
+        <main>
+            <div class="form-box">
+                <div class="form">
+                    <h2>Your Name</h2>
+                    <h2>Create New Room</h2>
+                    <div class="form-button">
+                        <button>New Room</button>
+                        <button>Rage against the Machine</button>
+                    </div>
+                    <h2>Enter Existing Room</h2>
+                    <div class="form-button">
+                        <button>Join Room</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
