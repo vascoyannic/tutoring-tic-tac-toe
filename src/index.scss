@@ -1,8 +1,17 @@
-body {
-    background: black;
-    color: white;
+html, body {
+    display: block;
+    height: 100vh;
+    font-size: 18px;
 }
 
-.meinHeader {
-    color: red;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+:global(#root) {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    height: 100%;
 }

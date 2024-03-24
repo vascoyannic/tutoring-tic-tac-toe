@@ -1,0 +1,47 @@
+
+.header {
+    background: #6D72C3;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0 24px;
+    color: #f0f0f0; 
+}
+
+.header>nav {
+    flex: 0 0 auto;
+}
+
+.back, .back:hover, .back:focus, .back:visited, .back:active {
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+
+.back:focus {
+    outline: 2px solid #fff;
+    outline-offset: -2px;
+}
+
+.iconBack {
+    display: block;
+    width: 48px;
+    height: 48px;
+
+    background-color: #f0f0f0;
+    mask: url(./icon_Back.svg) no-repeat center center;
+    mask-size: 24px 24px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.back:hover>.iconBack, .back:focus>.iconBack {
+    background-color: #fff;
+}
+
+.header>h1 {
+    flex: 1 1 auto;
+    margin: 0;
+    text-align: center;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 200%;
+}

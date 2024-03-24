@@ -9,7 +9,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     resolve: {
-        extensions: [".tsx", ".ts", ".js"],
+        extensions: [".tsx", ".ts", ".js", ".scss", ".svg"],
     },
     module: {
         rules: [
@@ -30,6 +30,10 @@ module.exports = {
                     },
                     "sass-loader"
                 ]
+            },
+            {
+                test: /\.svg$/i,
+                type: "asset/inline"
             }
         ]
     },
