@@ -1,0 +1,15 @@
+@use "sass:math";
+
+.boardCell {
+    position: absolute;
+    width: calc(100% / 3);
+    height: calc(100% / 3);
+    cursor: pointer;
+}
+
+@for $i from 0 through 8 {
+    .boardCell:nth-child(#{$i + 1}) {
+        left: math.div(100%,3) * ($i % 3);
+        top: math.div(100%,3) * math.floor(math.div($i, 3));
+    }
+}

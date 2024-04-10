@@ -1,0 +1,43 @@
+.boardBox {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.board {
+    display: block;
+    aspect-ratio: 1 / 1;
+    position: relative;
+}
+.boardGridV1, .boardGridV2, .boardGridH1, .boardGridH2 {
+    background-color: #3c3c3c;
+    position: absolute;
+}
+
+.boardGridV1, .boardGridV2 {
+    width: 6px;
+    height: 100%;
+}
+
+.boardGridH1, .boardGridH2 {
+    width: 100%;
+    height: 6px;            
+}
+
+.boardGridV1 {
+    left: calc(100% / 3 - 3px);
+}
+
+.boardGridV2 {
+    right: calc(100% / 3 - 3px);
+}
+
+.boardGridH1 {
+    top: calc(100% / 3 - 3px);
+}
+
+.boardGridH2 {
+    bottom: calc(100% / 3 - 3px);
+}
