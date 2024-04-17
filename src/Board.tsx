@@ -10,15 +10,9 @@ const Board: React.FC<BoardProps> = () => {
     return (
         <div className={style.boardBox}>
             <div className={style.board}>
-                <BoardCell x={0} y={0} state={CellState.O}/>
-                <BoardCell x={0} y={0} state={CellState.O}/>
-                <BoardCell x={0} y={0} state={CellState.O}/>
-                <BoardCell x={0} y={0} state={CellState.O}/>
-                <BoardCell x={0} y={0} state={CellState.O}/>
-                <BoardCell x={0} y={0} state={CellState.O}/>
-                <BoardCell x={0} y={0} state={CellState.O}/>
-                <BoardCell x={0} y={0} state={CellState.O}/>
-                <BoardCell x={0} y={0} state={CellState.O}/>
+                <BoardCell state={CellState.O}/>
+                <BoardCell state={CellState.X}/>
+                <BoardCell state={CellState.EMPTY}/>
                 {/* <div className="board-cell board-row-1 board-col-1" id="board-cell-1"><div className="board-icon icon-o"></div></div>
                 <div className="board-cell board-row-1 board-col-2" id="board-cell-2"></div>
                 <div className="board-cell board-row-1 board-col-3" id="board-cell-3"></div>
