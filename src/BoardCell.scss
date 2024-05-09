@@ -13,3 +13,11 @@
         top: math.div(100%,3) * math.floor(math.div($i, 3));
     }
 }
+
+.boardIcon {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    mask-size: 70%;
+}

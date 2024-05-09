@@ -1,0 +1,17 @@
+.iconX {
+    background-color: #156aca;
+    mask: {
+        image: url(./icon_X.svg);
+        repeat: no-repeat;
+        position: center center;
+    }
+}
+
+.iconO {
+    background-color: #ca2e55;
+    mask: {
+        image: url(./icon_O.svg);
+        repeat: no-repeat;
+        position: center center;
+    }
+}
