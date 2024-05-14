@@ -2,8 +2,7 @@ import * as React from "react";
 import style from "./BoardCell.scss";
 import Icon, { IconType } from "./Icon";
 import cn from "classnames";
-
-export enum CellState {EMPTY, X, O}
+import { CellState } from "./GameStatus";
 
 interface BoardCellProps {
     state:CellState;
