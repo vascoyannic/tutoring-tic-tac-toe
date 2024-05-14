@@ -13,6 +13,9 @@ const Board: React.FC<BoardProps> = () => {
                 <BoardCell state={CellState.O}/>
                 <BoardCell state={CellState.X}/>
                 <BoardCell state={CellState.EMPTY}/>
+                <BoardCell state={CellState.O} isPreview/>
+                <BoardCell state={CellState.X} isPreview/>
+            
                 {/* <div className="board-cell board-row-1 board-col-1" id="board-cell-1"><div className="board-icon icon-o"></div></div>
                 <div className="board-cell board-row-1 board-col-2" id="board-cell-2"></div>
                 <div className="board-cell board-row-1 board-col-3" id="board-cell-3"></div>

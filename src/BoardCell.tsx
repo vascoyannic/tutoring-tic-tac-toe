@@ -1,17 +1,19 @@
 import * as React from "react";
 import style from "./BoardCell.scss";
 import Icon, { IconType } from "./Icon";
+import cn from "classnames";
 
 export enum CellState {EMPTY, X, O}
 
 interface BoardCellProps {
     state:CellState;
+    isPreview?: boolean;
 }
 
-export const BoardCell: React.FC<BoardCellProps> = ({state}) => {
-    return <div className={style.boardCell}>{
+export const BoardCell: React.FC<BoardCellProps> = ({state, isPreview}) => {
+    return <div className={cn(style.boardCell, isPreview && style.preview)}>{
         state !== CellState.EMPTY &&
-        <Icon type={state === CellState.X ? IconType.X : IconType.O} className={style.boardIcon}/>
+        <Icon type={state === CellState.X ? IconType.X : IconType.O} className={style.boardIcon} />
     }</div>
     // return <div className="board-cell board-row-1 board-col-1"><div className="board-icon icon-o"></div></div>
 }
