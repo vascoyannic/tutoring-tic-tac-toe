@@ -1,6 +1,7 @@
 import * as React from "react";
 import style from "./Board.scss";
-import { BoardCell, CellState } from "./BoardCell";
+import { BoardCell } from "./BoardCell";
+import { CellState } from "./GameStatus";
 
 interface BoardProps {
     
