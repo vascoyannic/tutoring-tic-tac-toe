@@ -5,14 +5,17 @@ import { BoardState, CellState } from "./GameStatus";
 
 interface BoardProps {
     boardState: BoardState;
+    onCellPlayed?: (i:number)=>void;
 }
 
-const Board: React.FC<BoardProps> = ({boardState}) => {
+const Board: React.FC<BoardProps> = ({boardState, onCellPlayed}) => {
     return (
         <div className={style.boardBox}>
             <div className={style.board}>
                 {
-                    boardState.cells.map((cell, i)=><BoardCell key={i} state={cell}/>)
+                    boardState.cells.map((cell, i)=><BoardCell key={i} state={cell} onClick={()=>{
+                        onCellPlayed(i)
+                    }}/>)
                 }
                 {/*<BoardCell state={CellState.O}/>
                 <BoardCell state={CellState.X}/>

@@ -5,12 +5,13 @@ import cn from "classnames";
 import { CellState } from "./GameStatus";
 
 interface BoardCellProps {
-    state:CellState;
+    state: CellState;
     isPreview?: boolean;
+    onClick?: React.MouseEventHandler<HTMLDivElement>;  
 }
 
-export const BoardCell: React.FC<BoardCellProps> = ({state, isPreview}) => {
-    return <div className={cn(style.boardCell, isPreview && style.preview)}>{
+export const BoardCell: React.FC<BoardCellProps> = ({state, isPreview, onClick}) => {
+    return <div className={cn(style.boardCell, isPreview && style.preview)} onClick={onClick}>{
         state !== CellState.EMPTY &&
         <Icon type={state === CellState.X ? IconType.X : IconType.O} className={style.boardIcon} />
     }</div>

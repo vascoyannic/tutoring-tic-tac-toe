@@ -20,6 +20,10 @@ export function makeMove (state: BoardState, move:number):BoardState {
         throw new Error("cell length doesn't match 9");
     }
 
+    if (state.cells[move]!==CellState.EMPTY) {
+        return state;
+    }
+
     //CellState einer cell ändern
     let newCells=[...state.cells];
     newCells[move]=state.activePlayer as number as CellState;
