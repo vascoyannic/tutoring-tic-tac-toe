@@ -37,3 +37,10 @@ export function makeMove (state: BoardState, move:number):BoardState {
         activePlayer: newActivePlayer
     }
 }
+
+export function getDefaultState (): BoardState {
+    return {
+        activePlayer: Player.X, 
+        cells: Array.from({length:9}).map(()=>CellState.EMPTY)
+    }
+}

@@ -1,21 +1,24 @@
 import * as React from "react";
 import style from "./Board.scss";
 import { BoardCell } from "./BoardCell";
-import { CellState } from "./GameStatus";
+import { BoardState, CellState } from "./GameStatus";
 
 interface BoardProps {
-    
+    boardState: BoardState;
 }
 
-const Board: React.FC<BoardProps> = () => {
+const Board: React.FC<BoardProps> = ({boardState}) => {
     return (
         <div className={style.boardBox}>
             <div className={style.board}>
-                <BoardCell state={CellState.O}/>
+                {
+                    boardState.cells.map((cell, i)=><BoardCell key={i} state={cell}/>)
+                }
+                {/*<BoardCell state={CellState.O}/>
                 <BoardCell state={CellState.X}/>
                 <BoardCell state={CellState.EMPTY}/>
                 <BoardCell state={CellState.O} isPreview/>
-                <BoardCell state={CellState.X} isPreview/>
+                <BoardCell state={CellState.X} isPreview/> */}
             
                 {/* <div className="board-cell board-row-1 board-col-1" id="board-cell-1"><div className="board-icon icon-o"></div></div>
                 <div className="board-cell board-row-1 board-col-2" id="board-cell-2"></div>
